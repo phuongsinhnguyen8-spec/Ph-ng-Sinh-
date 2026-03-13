@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nguyễn Phương Sinh</title>
+    <style>
+        /* Cấu hình màu sắc chủ đạo: Xanh dương chuyên nghiệp */
+        :root {
+            --bg-color: #0a192f;
+            --card-bg: #112240;
+            --text-main: #e6f1ff;
+            --text-sub: #8892b0;
+            --accent: #64ffda; /* Màu xanh ngọc tạo điểm nhấn */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(10, 25, 47, 0.85);
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 80%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--accent); }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(10,25,47,0.5), var(--bg-color)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000') no-repeat center center/cover;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; color: var(--accent); }
+        .hero p { font-size: 1.2rem; color: var(--text-sub); max-width: 600px; }
+
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+
+        .section-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+            border-left: 4px solid var(--accent);
+        }
+
+        h2.section-title { color: var(--accent); margin-bottom: 20px; }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid var(--accent);
+        }
+
+        .contact-list { list-style: none; padding: 0; }
+        .contact-list li { margin-bottom: 10px; color: var(--text-sub); }
+        .contact-list b { color: var(--accent); }
+
+        /* Phần Bình Luận */
+        .comment-box { margin-top: 40px; }
+        textarea {
+            width: 100%;
+            padding: 15px;
+            background: var(--bg-color);
+            border: 1px solid var(--text-sub);
+            color: white;
+            border-radius: 5px;
+            resize: none;
+        }
+        .btn-send {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 10px 25px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-send:hover { background: rgba(100, 255, 218, 0.1); }
+        #comment-display { margin-top: 20px; }
+        .cmt { background: rgba(255,255,255,0.05); padding: 10px; border-radius: 5px; margin-bottom: 10px; font-size: 0.9rem; }
+
+        footer { text-align: center; padding: 40px; color: var(--text-sub); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">P.SINH</div>
+    <nav>
+        <a href="#about">Tôi là ai?</a>
+        <a href="#edu">Học vấn</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>NGUYỄN PHƯƠNG SINH</h1>
+    <p>Lớp 11B4 – Trường THPT Tôn Đức Thắng (Nam Ninh Hòa)</p>
+    <p>Định hướng: Phát triển bản thân & Đóng góp cộng đồng</p>
+</section>
+
+<div class="container">
+    
+    <section id="about" class="section-card">
+        <h2 class="section-title">Tôi là ai?</h2>
+        <img src="https://via.placeholder.com/400x300" alt="Ảnh của Phương Sinh" class="profile-img">
+        <p>
+            Chào mọi người, tôi là <b>Nguyễn Phương Sinh</b>, hiện đang sống tại thôn <b>Tân Quang, xã Tân Định, tỉnh Khánh Hòa</b>. 
+            Là một người con của vùng đất Ninh Hòa, tôi luôn mang trong mình tinh thần hiếu học và mong muốn cống hiến.
+        </p>
+        <p>
+            Thay vì những dòng code khô khan, niềm đam mê của tôi nằm ở việc <b>kết nối con người</b> và <b>phát triển kỹ năng xã hội</b>. 
+            Tôi tin rằng mỗi cá nhân đều có một sứ mệnh riêng để làm cho thế giới xung quanh tốt đẹp hơn.
+        </p>
+    </section>
+
+    <section id="edu" class="section-card">
+        <h2 class="section-title">Học vấn</h2>
+        <p>Học sinh lớp 11B4 - Trường THPT Tôn Đức Thắng.</p>
+        <p>Mục tiêu: Hoàn thành tốt chương trình phổ thông và trau dồi các kỹ năng mềm như giao tiếp, quản lý thời gian và làm việc nhóm.</p>
+    </section>
+
+    <section id="projects" class="section-card">
+        <h2 class="section-title">Dự án & Trách nhiệm</h2>
+        <p><b>1. Phát triển nhà trường:</b> Tích cực tham gia các phong trào Đoàn trường, đóng góp ý tưởng xây dựng môi trường học đường xanh - sạch - đẹp và hỗ trợ bạn bè trong học tập.</p>
+        <p><b>2. Trách nhiệm gia đình:</b> Luôn hoàn thành tốt các công việc nhà, là chỗ dựa tinh thần và hỗ trợ ba mẹ, ý thức được vai trò quan trọng của gia đình trong sự trưởng thành của bản thân.</p>
+    </section>
+
+    <section id="contact" class="section-card">
+        <h2 class="section-title">Liên hệ</h2>
+        <ul class="contact-list">
+            <li><b>Gmail:</b> phuongsinh.ninhhoa@gmail.com</li>
+            <li><b>SĐT Bạn Thân:</b> 03xx.xxx.xxx (Để lại tin nhắn nếu tôi vắng mặt)</li>
+        </ul>
+    </section>
+
+    <div class="comment-box">
+        <h2 class="section-title">Bình luận</h2>
+        <textarea id="txtComment" rows="3" placeholder="Để lại lời nhắn cho Sinh nhé..."></textarea>
+        <button class="btn-send" onclick="postComment()">Gửi lời nhắn</button>
+        <div id="comment-display">
+            </div>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Designed by Nguyễn Phương Sinh. All rights reserved.
+</footer>
+
+<script>
+    function postComment() {
+        const text = document.getElementById('txtComment').value;
+        const display = document.getElementById('comment-display');
+        if(text.trim() === "") {
+            alert("Bạn hãy nhập gì đó nhé!");
+            return;
+        }
+        const newCmt = document.createElement('div');
+        newCmt.className = 'cmt';
+        newCmt.innerHTML = `<b>Khách:</b> ${text}`;
+        display.prepend(newCmt);
+        document.getElementById('txtComment').value = "";
+    }
+</script>
+
+</body>
+</html>
